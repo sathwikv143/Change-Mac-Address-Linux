@@ -1,8 +1,8 @@
 #!/usr/bin/python
-
+import netifaces as ni
 import argparse, os
 
-ifaces = os.listdir('/sys/class/net/')
+ifaces = ni.interfaces()
 i = '|'.join(ifaces)
 modes = ["random","show","old"]
 m = '|'.join(modes)
